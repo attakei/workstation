@@ -9,3 +9,17 @@
         - zplugin.zsh
         - prompt.zsh
         - env.zsh
+    # Xonsh in user-local folder.
+    - role: attakei.xonsh
+      xonsh__pip_args: --user
+      xonsh__xontribs:
+        - bashisims
+        - coreutils
+        - distributed
+        - free_cwd
+        - jedi
+        - mpl
+        - prompt_ret_code
+        - vox
+        - vox_tabcomplete
+        - whole_word_jumping
