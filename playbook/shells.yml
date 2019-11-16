@@ -8,3 +8,4 @@
         - keybinds.zsh
         - zplugin.zsh
         - prompt.zsh
+        - env.zsh
