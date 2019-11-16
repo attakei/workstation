@@ -1,0 +1,16 @@
+---
+# tasks file for atakei.zsh
+- include_tasks: install.yml
+- name: Fetch zplugin
+  git:
+    repo: https://github.com/zdharma/zplugin.git
+    dest: '{{ zsh__zplugin_home }}/bin'
+  when: zsh__use_zplugin
+- name: Create .zshrc
+  template:
+    src: '.zshrc.j2'
+    dest: '{{ ansible_env.HOME }}/.zshrc'
+  notify:
+    - zsh_reload
+  tags:
+    - zsh-config

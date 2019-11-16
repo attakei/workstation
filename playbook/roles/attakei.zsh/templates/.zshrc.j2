@@ -1,0 +1,13 @@
+{%- if zsh__use_zplugin -%}
+
+### Added by Zplugin's installer
+source "{{ zsh__zplugin_home }}/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin installer's chunk
+
+{% endif -%}
+
+{%- for src in zsh__source_extras -%}
+    source "{{ zsh__source_extras_dir }}/{{ src }}"
+{% endfor %}

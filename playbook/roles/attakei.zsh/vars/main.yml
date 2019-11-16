@@ -1,0 +1,3 @@
+---
+# vars file for atakei.zsh
+zsh__path_linux: /usr/bin/zsh
