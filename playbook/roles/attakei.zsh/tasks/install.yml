@@ -1,0 +1,14 @@
+---
+- name: Install zsh
+  become: yes
+  pacman:
+    name: zsh
+    state: present
+  tags:
+    - zsh
+- name: Enable as login-shell
+  become: yes
+  user:
+    name: '{{ ansible_env.USER }}'
+    shell: '{{ zsh__path_linux }}'
+  when: zsh__as_login_shell

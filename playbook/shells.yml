@@ -1,0 +1,4 @@
+- hosts: pc
+  roles:
+    - role: attakei.zsh
+      zsh__as_login_shell: yes
