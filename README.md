@@ -29,3 +29,7 @@ $ sudo pacman -S git python python-pip
 $ pip install --user ansible
 $ git clone https://github.com/attakei/workstation.git YOUR_PATH
 ```
+
+## CI
+
+In GitHub Actions, check syntax.
