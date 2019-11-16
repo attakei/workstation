@@ -2,3 +2,6 @@
 - import_playbook: shells.yml
   tags:
     - shell
+- import_playbook: packages.yml
+  tags:
+    - packages

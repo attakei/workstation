@@ -1,0 +1,5 @@
+packages_master:
+  - label: tig
+    state: present
+    Archlinux:
+      name: tig

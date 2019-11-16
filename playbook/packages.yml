@@ -1,0 +1,17 @@
+# --------------------------------------
+# Settings for packages by only tools
+# --------------------------------------
+---
+- hosts: pc
+  vars_files:
+    - vars/packages.yml
+  tasks:
+    - name: Filter by OS
+      set_fact:
+        packages: '{{ packages_master|dist_only(ansible_distribution) }}'
+    - name: Install packages by pacman(arch only)
+      become: yes
+      pacman:
+        name: '{{ item.name }}'
+        state: '{{ item.state }}'
+      with_items: '{{ packages }}'
