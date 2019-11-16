@@ -1,0 +1,4 @@
+---
+# handlers file for atakei.zsh
+- name: zsh_reload
+  debug: msg='Zsh is now configured. Please reload by "source ~/.zshrc"'

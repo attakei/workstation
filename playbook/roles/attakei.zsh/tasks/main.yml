@@ -1,3 +1,4 @@
 ---
 # tasks file for atakei.zsh
 - include_tasks: install.yml
+- include_tasks: configuration.yml
