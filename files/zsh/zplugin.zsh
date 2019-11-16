@@ -2,8 +2,11 @@
 # Zplugin plugin using
 # --------------------------------------
 zplugin light "b4b4r07/enhancd"
-zplugin light "zsh-users/zsh-completions"
 zplugin light "zsh-users/zsh-syntax-highlighting"
+
+# tab-complettion
+zplugin light "zsh-users/zsh-completions"
+autoload -U compinit && compinit
 
 # For using fzf
 zplugin ice from"gh-r" as"command"
