@@ -12,3 +12,9 @@
         name: '{{ item.name }}'
         state: '{{ item.state }}'
       with_items: '{{ packages_master|by_module("pacman") }}'
+    - name: Install packages by pacman(arch only)
+      pip:
+        name: '{{ item.name }}'
+        state: '{{ item.state }}'
+        extra_args: --user
+      with_items: '{{ packages_master|by_module("pip") }}'
