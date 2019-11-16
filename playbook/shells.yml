@@ -9,3 +9,8 @@
         - zplugin.zsh
         - prompt.zsh
         - env.zsh
+  tasks:
+    - pip:
+        name: xonsh
+        state: present
+        extra_args: --user
