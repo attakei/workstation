@@ -1,6 +1,9 @@
-name: Lint any files 
+---
+name: Lint any files
 
-on: [push]
+# yamllint disable-line rule:truthy
+on:
+  - push
 
 jobs:
   build:
