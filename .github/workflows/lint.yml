@@ -15,7 +15,7 @@ jobs:
           python-version: 3.7
       - name: Install dependencies
         run: |
-          echo install-dependencies
+          pip install -r tests/requirements.txt
       - name: Lint with yamllint
         run: |
-          echo lint-with-yamllint
+          yamllint -c tests/yamllint.yml ./

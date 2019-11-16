@@ -1,0 +1,2 @@
+# Requirements for workstation tools and testing.
+yamllint
