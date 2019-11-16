@@ -1,4 +1,11 @@
 ---
 # tasks file for atakei.zsh
 - include_tasks: install.yml
-- include_tasks: configuration.yml
+- name: Create .zshrc
+  template:
+    src: '.zshrc.j2'
+    dest: '{{ ansible_env.HOME }}/.zshrc'
+  notify:
+    - zsh_reload
+  tags:
+    - zsh-config

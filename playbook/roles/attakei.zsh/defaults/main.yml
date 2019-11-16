@@ -1,5 +1,4 @@
 ---
 zsh__as_login_shell: no
-zsh__path_linux: /usr/bin/zsh
 zsh__source_extras_dir: files/zsh
 zsh__source_extras: []
