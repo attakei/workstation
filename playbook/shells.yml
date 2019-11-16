@@ -4,7 +4,7 @@
     - role: attakei.zsh
       zsh__as_login_shell: yes
       zsh__use_zplugin: yes
-      zsh__source_extras_dir: '{{ ansible_env.PWD }}/files/zsh'
+      zsh__source_extras_dir: '{{ ansible_env.PWD }}/../files/zsh'
       zsh__source_extras:
         - keybinds.zsh
         - zplugin.zsh
