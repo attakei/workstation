@@ -2,20 +2,24 @@ from typing import List, Dict
 from ansible import errors
 
 
-def filter_by_dist(packages: List[Dict], dist: str):
+def filter_by_dist(packages: List[Dict], module: str):
     filtered = []
     for p in packages:
-        if dist not in p:
+        if module not in p['modules']:
             continue
-        package = p[dist]
+        package = {}
         package.setdefault('state', 'present')
+        p_mst = p['modules'][module]
+        if isinstance(p_mst, str):
+            package['name'] = p_mst
+        else:
+            package = dict(package, **p_mst)
         filtered.append(package)
-    print(filtered)
     return filtered
 
 
 class FilterModule(object):
     def filters(self):
         return {
-            'dist_only': filter_by_dist,
+            'by_module': filter_by_dist,
         }
