@@ -5,3 +5,7 @@
     name: xonsh
     state: present
     extra_args: '{{ xonsh__pip_args }}'
+- name: Install xontribs
+  # TODO: Use comand module currently, fix for idempotence. 
+  command: 'xonsh -c "xontrib install {{ item }}"'
+  with_items: '{{ xonsh__xontribs }}'
