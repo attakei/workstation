@@ -20,6 +20,7 @@
         - free_cwd
         - jedi
         - mpl
+        - powerline
         - prompt_ret_code
         - vox
         - vox_tabcomplete
