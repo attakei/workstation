@@ -9,5 +9,5 @@ autoload -Uz _zplugin
 {% endif -%}
 
 {%- for src in zsh__source_extras -%}
-    source "{{ zsh__source_extras_dir }}/{{ src }}"
+    source "{{ (zsh__source_extras_dir + '/' + src)|realpath }}"
 {% endfor %}
