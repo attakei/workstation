@@ -1,0 +1,3 @@
+[submodule "playbook/roles/attakei.xonsh"]
+	path = playbook/roles/attakei.xonsh
+	url = https://github.com/attakei/ansible-role-xonsh.git
