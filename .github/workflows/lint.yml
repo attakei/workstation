@@ -22,3 +22,6 @@ jobs:
       - name: Lint with yamllint
         run: |
           yamllint -c tests/yamllint.yml ./
+      - name: Lint with yamllint
+        run: |
+          flake8

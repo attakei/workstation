@@ -1,5 +1,5 @@
 from typing import List, Dict
-from ansible import errors
+from ansible import errors  # noqa
 
 
 def filter_by_dist(packages: List[Dict], module: str):
