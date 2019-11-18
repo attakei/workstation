@@ -11,5 +11,5 @@
   become: yes
   user:
     name: '{{ ansible_env.USER }}'
-    shell: '{{ zsh__path_linux }}'
+    shell: '{{ zsh__bin_path }}'
   when: zsh__as_login_shell

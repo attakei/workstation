@@ -4,3 +4,4 @@ zsh__source_extras_dir: files/zsh
 zsh__source_extras: []
 zsh__use_zplugin: no
 zsh__zplugin_home: '{{ ansible_env.HOME }}/.zplugin'
+zsh__bin_path: /usr/bin/zsh
