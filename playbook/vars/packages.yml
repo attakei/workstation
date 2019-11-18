@@ -8,6 +8,9 @@ packages_master:
   - modules:
       pacman: neovim
       homebrew: neovim
+  # GitKraken
+  - modules:
+      homebrew_cask: gitkraken
   # Django(for django-admin)
   - modules:
       pip: django
