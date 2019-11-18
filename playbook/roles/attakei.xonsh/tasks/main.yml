@@ -4,6 +4,7 @@
   pip:
     name: xonsh
     state: present
+    executable: '{{ xonsh__pip_executable }}'
     extra_args: '{{ xonsh__pip_args }}'
 - name: Install xontribs
   # TODO: Use comand module currently, fix for idempotence.

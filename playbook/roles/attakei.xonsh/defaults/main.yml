@@ -1,4 +1,5 @@
 ---
 # defaults file for attakei.xonsh
+xonsh__pip_executable: /usr/bin/pip
 xonsh__pip_args: ''
 xonsh__xontribs:

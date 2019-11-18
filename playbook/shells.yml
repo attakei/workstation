@@ -15,6 +15,7 @@
         - env.zsh
     # Xonsh in user-local folder.
     - role: attakei.xonsh
+      xonsh__pip_executable: '{{ commands.pip }}'
       xonsh__pip_args: --user
       xonsh__xontribs:
         - bashisims
