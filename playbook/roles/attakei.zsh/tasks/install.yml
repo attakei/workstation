@@ -4,6 +4,7 @@
   pacman:
     name: zsh
     state: present
+  when: ansible_distribution == 'Archlinux'
   tags:
     - zsh
 - name: Enable as login-shell
