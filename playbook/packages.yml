@@ -12,6 +12,13 @@
         name: '{{ item.name }}'
         state: '{{ item.state }}'
       with_items: '{{ packages_master|by_module("pacman") }}'
+      when: ansible_distribution == 'Archlinux'
+    - name: Install packages by homebrew(mac only)
+      pip:
+        name: '{{ item.name }}'
+        state: '{{ item.state }}'
+      with_items: '{{ packages_master|by_module("homebrew") }}'
+      when: ansible_distribution == 'MacOSX'
     - name: Install packages by pacman(arch only)
       pip:
         name: '{{ item.name }}'
