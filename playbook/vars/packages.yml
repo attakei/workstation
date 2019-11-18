@@ -3,9 +3,11 @@ packages_master:
   # tig
   - modules:
       pacman: tig
+      homebrew: tig
   # NeoVim: As bare Vim (vim is used many plugin as small IDE)
   - modules:
       pacman: neovim
+      homebrew: neovim
   # Django(for django-admin)
   - modules:
       pip: django

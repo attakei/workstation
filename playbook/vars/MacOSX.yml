@@ -1,0 +1,3 @@
+commands:
+  pip: /usr/local/bin/pip3
+  zsh: /usr/local/bin/zsh

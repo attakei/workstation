@@ -1,7 +1,10 @@
 ---
 - hosts: pc
+  vars_files:
+    - 'vars/{{ ansible_distribution }}.yml'
   roles:
     - role: attakei.zsh
+      zsh__bin_path: '{{ commands.zsh }}'
       zsh__as_login_shell: yes
       zsh__use_zplugin: yes
       zsh__source_extras_dir: '{{ ansible_env.PWD }}/../files/zsh'

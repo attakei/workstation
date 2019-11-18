@@ -4,11 +4,12 @@
   pacman:
     name: zsh
     state: present
+  when: ansible_distribution == 'Archlinux'
   tags:
     - zsh
 - name: Enable as login-shell
   become: yes
   user:
     name: '{{ ansible_env.USER }}'
-    shell: '{{ zsh__path_linux }}'
+    shell: '{{ zsh__bin_path }}'
   when: zsh__as_login_shell

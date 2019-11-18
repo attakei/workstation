@@ -4,6 +4,7 @@
 ---
 - hosts: pc
   vars_files:
+    - 'vars/{{ ansible_distribution }}.yml'
     - vars/packages.yml
   tasks:
     - name: Install packages by pacman(arch only)
@@ -12,9 +13,18 @@
         name: '{{ item.name }}'
         state: '{{ item.state }}'
       with_items: '{{ packages_master|by_module("pacman") }}'
-    - name: Install packages by pacman(arch only)
+      when: ansible_distribution == 'Archlinux'
+    - name: Install packages by homebrew(mac only)
       pip:
         name: '{{ item.name }}'
         state: '{{ item.state }}'
+      with_items: '{{ packages_master|by_module("homebrew") }}'
+      when: ansible_distribution == 'MacOSX'
+    - name: Install packages by pip(path specified only)
+      pip:
+        name: '{{ item.name }}'
+        state: '{{ item.state }}'
+        executable: '{{ commands.pip }}'
         extra_args: --user
       with_items: '{{ packages_master|by_module("pip") }}'
+      when: '"pip" in commands'
