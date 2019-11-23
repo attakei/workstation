@@ -2,6 +2,11 @@
 - hosts: pc
   vars_files:
     - 'vars/{{ ansible_distribution }}.yml'
+  pre_tasks:
+    - set_fact:
+        ws_files_dir: '{{ [ansible_env.PWD, "../files"]|join("/")|realpath }}'
+      tags:
+        - hyper
   roles:
     - role: attakei.zsh
       zsh__bin_path: '{{ commands.zsh }}'
@@ -29,6 +34,6 @@
         - vox_tabcomplete
         - whole_word_jumping
     - role: attakei-local.hyper
-      hyper__config_src: '{{ [ansible_env.PWD, "../files/.hyper.js"]|join("/")|realpath }}'
+      hyper__config_src: '{{ ws_files_dir + "/.hyper.js" }}'
       tags:
         - hyper
