@@ -14,3 +14,8 @@ packages_master:
   # Django(for django-admin)
   - modules:
       pip: django
+  # Hyper(Terminal)
+  - modules:
+      appimage:
+        name: hyper
+        url: https://releases.hyper.is/download/AppImage
