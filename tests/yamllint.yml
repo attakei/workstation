@@ -6,6 +6,8 @@ ignore: |
 
 rules:
   document-start: disable
+  line-length:
+    max: 160
   new-line-at-end-of-file: disable
   truthy:
     allowed-values:
