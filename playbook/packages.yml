@@ -43,11 +43,11 @@
         - get_url:
             url: '{{ item.url }}'
             dest: '{{ ansible_env.HOME }}/.local/opt/{{ item.name }}'
+            mode: 'u+x'
           with_items: '{{ packages_master|by_module("appimage") }}'
         - file:
             src: '{{ ansible_env.HOME }}/.local/opt/{{ item.name }}'
             dest: '{{ ansible_env.HOME }}/.local/bin/{{ item.name }}'
             state: link
-            mode: 'u+x'
           with_items: '{{ packages_master|by_module("appimage") }}'
       when: ansible_distribution == 'Archlinux'
