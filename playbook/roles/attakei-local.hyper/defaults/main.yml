@@ -1,0 +1,4 @@
+---
+hyper__config_path: '{{ ansible_env.HOME }}/.hyper.js'
+hyper__config_mode: 'link'
+hyper__config_src: files/.hyper.js

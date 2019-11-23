@@ -28,5 +28,7 @@
         - vox
         - vox_tabcomplete
         - whole_word_jumping
-  tasks:
-    - include_tasks: tasks/hyper.yml
+    - role: attakei-local.hyper
+      hyper__config_src: '{{ [ansible_env.PWD, "../files/.hyper.js"]|join("/")|realpath }}'
+      tags:
+        - hyper

@@ -1,0 +1,6 @@
+- name: Link workstation config
+  file:
+    state: link
+    src: '{{ hyper__config_src }}'
+    dest: '{{ hyper__config_path }}'
+  when: hyper__config_mode == 'link'
