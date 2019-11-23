@@ -1,5 +1,5 @@
 ---
-- import_playbook: shells.yml
+- import_playbook: terminal.yml
   tags:
     - shell
 - import_playbook: packages.yml
