@@ -17,6 +17,7 @@
         - keybinds.zsh
         - zplugin.zsh
         - prompt.zsh
+        - nvm.zsh
         - env.zsh
     # Xonsh in user-local folder.
     - role: attakei.xonsh
