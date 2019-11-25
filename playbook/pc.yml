@@ -5,3 +5,20 @@
 - import_playbook: packages.yml
   tags:
     - packages
+- hosts: pc
+  vars_files:
+    - 'vars/{{ ansible_distribution }}.yml'
+  tasks:
+    - name: Link user fonts
+      file:
+        state: 'link'
+        src: '{{ item }}'
+        dest: '{{ dirs.fonts }}/{{ item|basename }}'
+      with_items: '{{ lookup("dirglob", ansible_env.PWD + "/../files/fonts/*") }}'
+      notify:
+        - Reload fonts
+      tags:
+        - fonts
+  handlers:
+    - name: Reload fonts
+      shell: fc-cache

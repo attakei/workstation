@@ -3,3 +3,5 @@ commands:
   zsh: /usr/bin/zsh
 # config_dirs:
 #   hyper: '{{ ansible_env.HOME }}/.config/Hyper'
+dirs:
+  fonts: '{{ ansible_env.HOME }}/.local/share/fonts'
