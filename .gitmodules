@@ -1,0 +1,3 @@
+[submodule "files/fonts/ricty-diminished"]
+	path = files/fonts/ricty-diminished
+	url = https://github.com/edihbrandon/RictyDiminished.git
