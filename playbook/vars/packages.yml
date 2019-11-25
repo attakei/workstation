@@ -27,3 +27,4 @@ packages_master:
   # nvm (Node executable manager)
   - modules:
       pacman: nvm
+      homebrew: nvm
