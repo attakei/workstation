@@ -14,7 +14,7 @@
         state: 'link'
         src: '{{ item }}'
         dest: '{{ dirs.fonts }}/{{ item|basename }}'
-      with_items: '{{ lookup("dirglob", ansible_env.PWD + "/../files/fonts/*") }}'
+      with_items: '{{ lookup("dirglob", ansible_env.PWD + "/../files/fonts/*", wantlist=True) }}'
       notify:
         - Reload fonts
       tags:
