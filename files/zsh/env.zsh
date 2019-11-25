@@ -1,7 +1,7 @@
 _os=`uname 2> /dev/null`
 
 # Android Studio (SDK management)
-export ANDROID_SDK_ROOT="$HOME/"`if [ $_os = 'Darwin' ] ; then echo Library; fi`"Android/Sdk"
+export ANDROID_SDK_ROOT="$HOME/"`if [ $_os = 'Darwin' ] ; then echo Library/; fi`"Android/sdk"
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 
 # Paths
