@@ -19,6 +19,7 @@ Worstation configurations and basic resources.
 
 - Remain your GitHub username and password.
 - Install Git, Python and Ansible.
+    - For Archlinux, need `git`, `python`, `python-pip`, `gcc`, `libffi`
     - Install Ansible into user-local space.
 - Git clone it.
 
