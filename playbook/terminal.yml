@@ -8,32 +8,6 @@
       tags:
         - hyper
   roles:
-    - role: attakei.zsh
-      zsh__bin_path: '{{ commands.zsh }}'
-      zsh__as_login_shell: yes
-      zsh__use_zplugin: yes
-      zsh__source_extras_dir: '{{ ansible_env.PWD }}/../files/zsh'
-      zsh__source_extras:
-        - keybinds.zsh
-        - zplugin.zsh
-        - prompt.zsh
-        - nvm.zsh
-        - env.zsh
-    # Xonsh in user-local folder.
-    - role: attakei.xonsh
-      xonsh__pip_executable: '{{ commands.pip }}'
-      xonsh__pip_args: --user
-      xonsh__xontribs:
-        - bashisims
-        - coreutils
-        - distributed
-        - free_cwd
-        - jedi
-        - mpl
-        - prompt_ret_code
-        - vox
-        - vox_tabcomplete
-        - whole_word_jumping
     - role: attakei-local.hyper
       hyper__config_src: '{{ ws_files_dir + "/.hyper.js" }}'
       tags:
