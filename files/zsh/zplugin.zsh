@@ -16,3 +16,6 @@ zplugin load junegunn/fzf-bin
 zplugin snippet OMZ::lib/git.zsh
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
 zplugin cdclear -q # <- forget completions provided up to this moment
+
+# virtualenv
+zplugin light "Tarrasch/zsh-autoenv"
