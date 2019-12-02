@@ -28,3 +28,6 @@ packages_master:
   - modules:
       pacman: nvm
       homebrew: nvm
+  # httpie
+  - modules:
+      pip: httpie
