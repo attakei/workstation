@@ -34,10 +34,14 @@
         extra_args: --user
       with_items: '{{ packages_master|by_module("pip") }}'
       when: '"pip" in commands'
+      tags:
+        - python
     - name: Prepare AppImage space
       file:
         state: directory
         path: '{{ ansible_env.HOME }}/.local/opt'
+      tags:
+        - appimage
     - name: Download and link AppImages (Linux only)
       block:
         - get_url:
@@ -51,3 +55,5 @@
             state: link
           with_items: '{{ packages_master|by_module("appimage") }}'
       when: ansible_distribution == 'Archlinux'
+      tags:
+        - appimage
