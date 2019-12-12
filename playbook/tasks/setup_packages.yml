@@ -1,0 +1,13 @@
+# --------------------------------------
+# Tasks collection to install application package
+#
+# - Used with with_item context ( = ref item in this tasks)
+# --------------------------------------
+---
+- debug: var=item
+- name: Install packages by pacman(arch only)
+  become: yes
+  pacman:
+    name: '{{ item.pacman }}'
+    state: '{{ item.state|default("present") }}'
+  when: ansible_distribution == 'Archlinux' and 'pacman' in item
