@@ -30,3 +30,10 @@
         - vox
         - vox_tabcomplete
         - whole_word_jumping
+    - role: attakei.vim_bootstrap
+      vim_command: vim
+      vim_langs:
+        - go
+        - html
+        - python
+        # - typescript
