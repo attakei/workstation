@@ -13,6 +13,7 @@
         - zplugin.zsh
         - prompt.zsh
         - nvm.zsh
+        - gcloud.zsh
         - env.zsh
     # Xonsh in user-local folder.
     - role: attakei.xonsh
