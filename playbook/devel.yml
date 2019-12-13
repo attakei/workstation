@@ -1,0 +1,13 @@
+---
+- hosts: pc
+  vars_files:
+    - 'vars/{{ ansible_distribution }}.yml'
+  tasks:
+    - name: Setup golang
+      include_tasks: tasks/setup_packages.yml
+      with_items:
+        - pacman: go
+    - name: Setup Nim-lang
+      include_tasks: tasks/setup_packages.yml
+      with_items:
+        - pacman: nim
