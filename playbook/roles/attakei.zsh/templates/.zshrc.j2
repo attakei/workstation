@@ -11,3 +11,6 @@ autoload -Uz _zplugin
 {%- for src in zsh__source_extras -%}
     source "{{ (zsh__source_extras_dir + '/' + src)|realpath }}"
 {% endfor %}
+if [ -e ~/.zsh_profile ] ; then
+    source ~/.zsh_profile
+fi
