@@ -1,5 +1,9 @@
 ---
 packages_master:
+  # alacritty
+  - modules:
+      pacman: alacritty
+      homebrew: alacritty
   # tig
   - modules:
       pacman: tig
