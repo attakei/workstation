@@ -7,8 +7,9 @@
         ws_files_dir: '{{ [ansible_env.PWD, "../files"]|join("/")|realpath }}'
       tags:
         - hyper
-  roles:
-    - role: attakei-local.hyper
-      hyper__config_src: '{{ ws_files_dir + "/.hyper.js" }}'
-      tags:
-        - hyper
+  tasks:
+    - name: Link workstation config for alacritty
+      file:
+        state: link
+        path: '{{ ansible_env.HOME }}/.config/alacritty/alacritty.yml'
+        src: '{{ ws_files_dir + "/alacritty.yml" }}'
