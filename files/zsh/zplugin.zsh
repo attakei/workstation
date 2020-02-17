@@ -1,7 +1,7 @@
 # --------------------------------------
 # Zplugin plugin using
 # --------------------------------------
-zplugin light "b4b4r07/enhancd"
+# zplugin light "b4b4r07/enhancd"
 zplugin light "zsh-users/zsh-syntax-highlighting"
 
 # tab-complettion
