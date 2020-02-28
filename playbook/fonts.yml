@@ -10,12 +10,14 @@
       file:
         state: 'directory'
         path: '{{ dirs.fonts }}'
-    - name: Link user fonts
-      file:
-        state: 'link'
+    - name: Fetch user fonts
+      unarchive:
         src: '{{ item }}'
-        dest: '{{ dirs.fonts }}/{{ item|basename }}'
-      with_items: '{{ lookup("dirglob", ansible_env.PWD + "/../files/fonts/*", wantlist=True) }}'
+        dest: '{{ ansible_env.HOME }}/.local/share/fonts/'
+        remote_src: yes
+      with_items:
+        - https://github.com/rayshan/mplus-fonts/archive/master.zip
+        - https://github.com/edihbrandon/RictyDiminished/archive/master.zip
       notify:
         - Reload fonts
       tags:
