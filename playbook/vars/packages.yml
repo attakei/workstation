@@ -25,3 +25,6 @@ packages_master:
   # httpie
   - modules:
       pip: httpie
+  # cookiecutter
+  - modules:
+      pip: cookiecutter
