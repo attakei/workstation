@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-import subprocess
+from subprocess import Popen, PIPE
 
 
-proc = subprocess.Popen("git init .".split())
-proc.communicate()
+Popen("git init .".split()).communicate()
+Popen("poetry install".split()).communicate()
