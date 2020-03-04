@@ -8,6 +8,10 @@
       tags:
         - hyper
   tasks:
+    - name: Create config directory
+      file:
+        state: directory
+        path: '{{ ansible_env.HOme }}/.config/alacritty'
     - name: Link workstation config for alacritty
       file:
         state: link
