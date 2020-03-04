@@ -20,7 +20,6 @@ packages_master:
       pip: django
   # nvm (Node executable manager)
   - modules:
-      pacman: nvm
       homebrew: nvm
   # httpie
   - modules:
