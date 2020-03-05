@@ -20,6 +20,17 @@
       pacman:
         name: '{{ packages }}'
       when: ansible_distribution == 'Archlinux'
+    - name: Use ssh-agent
+      block:
+        - copy:
+            src: ssh-agent.service
+            dest: '{{ ansible_env.HOME }}/.config/systemd/user/ssh-agent.service'
+        - systemd:
+            name: ssh-agent
+            scope: user
+            state: started
+            enabled: yes
+      tags: config
     - name: Set xinitrc
       template:
         src: xinitrc.j2
