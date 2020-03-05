@@ -27,3 +27,6 @@ packages_master:
   # cookiecutter
   - modules:
       pip: cookiecutter
+  # poetry
+  - modules:
+      pip: poetry
