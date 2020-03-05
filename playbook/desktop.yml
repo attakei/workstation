@@ -1,0 +1,27 @@
+# --------------------------------------
+# Settings for desktop environment(arch only)
+# --------------------------------------
+---
+- hosts: pc
+  vars_files:
+    - 'vars/{{ ansible_distribution }}.yml'
+  vars:
+    packages:
+      # Video for intel
+      - xf86-video-intel
+      - mesa
+      # Descktop
+      - xorg-server
+      - xorg-xinit
+  tasks:
+    - name: Install packages
+      become: yes
+      pacman:
+        name: '{{ packages }}'
+      when: ansible_distribution == 'Archlinux'
+    - name: Set xinitrc
+      template:
+        src: xinitrc.j2
+        dest: '{{ ansible_env.HOME }}/.xinitrc'
+      tags:
+        - config
