@@ -13,6 +13,7 @@
       # Descktop
       - xorg-server
       - xorg-xinit
+      - qtile
   tasks:
     - name: Install packages
       become: yes
@@ -23,5 +24,15 @@
       template:
         src: xinitrc.j2
         dest: '{{ ansible_env.HOME }}/.xinitrc'
+      tags:
+        - config
+    - name: Set Qtile configuration
+      block:
+        - file:
+            state: directory
+            path: '{{ ansible_env.HOME }}/.config/qtile'
+        - template:
+            src: qtile_config.py.j2
+            dest: '{{ ansible_env.HOME }}/.config/qtile/config.py'
       tags:
         - config
