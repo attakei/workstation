@@ -13,7 +13,13 @@
       # Descktop
       - xorg-server
       - xorg-xinit
+      - xorg-xinput
+      - xorg-xrandr
       - qtile
+      # IME
+      - fcitx
+      - fcitx-mozc
+      - fcitx-configtool
   tasks:
     - name: Install packages
       become: yes
