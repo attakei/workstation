@@ -25,3 +25,6 @@ jobs:
       - name: Lint with flake8
         run: |
           flake8
+      - name: Lint with black
+        run: |
+          black attakei_workstation --check
