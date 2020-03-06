@@ -5,6 +5,6 @@ from pathlib import Path
 @click.group()
 @click.option("--ws", default="~/ws", help="workstation directory")
 @click.pass_context
-def cmd(ctx, ws):
+def cmd(ctx: click.Context, ws: str):
     ctx.ensure_object(dict)
     ctx.obj["ws"] = Path(ws).expanduser()
