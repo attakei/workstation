@@ -27,8 +27,9 @@ Worstation configurations and basic resources.
 
 ```
 $ sudo pacman -S git python python-pip
-$ pip install --user ansible
 $ git clone https://github.com/attakei/workstation.git YOUR_PATH
+$ cd YOUR_PATH
+$ pip install --user .
 ```
 
 ## CI
