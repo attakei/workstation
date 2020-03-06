@@ -11,6 +11,7 @@ ws = "attakei_workstation:run"
 [tool.poetry.dependencies]
 python = "^3.8 | ^3.7"
 click = "^7.0"
+ansible = "^2.9.6"
 
 [tool.poetry.dev-dependencies]
 yamllint = "^1.20.0"
