@@ -1,12 +1,16 @@
 [tool.poetry]
-name = "ws"
+name = "attakei-workstation"
 version = "2020.2.28"
 description = ""
 authors = ["Kazuya Takei <myself@attakei.net>"]
 license = "Apache-2.0"
 
+[tool.poetry.scripts]
+ws = "attakei_workstation.cli:run"
+
 [tool.poetry.dependencies]
 python = "^3.8 | ^3.7"
+click = "^7.0"
 
 [tool.poetry.dev-dependencies]
 yamllint = "^1.20.0"
