@@ -37,3 +37,7 @@
         - html
         - python
         # - typescript
+      vim_additional_plugins:
+        - editorconfig/editorconfig-vim
+      tags:
+        - vim
