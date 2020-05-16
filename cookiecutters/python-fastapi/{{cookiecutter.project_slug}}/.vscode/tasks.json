@@ -12,7 +12,7 @@
     {
       "label": "server",
       "type": "shell",
-      "command": "poetry run python -m attakei_media -D",
+      "command": "poetry run python -m {{ cookiecutter.project_package }} -D",
       "problemMatcher": []
     },
     {
@@ -21,14 +21,9 @@
       "command": "poetry run make -C docs html"
     },
     {
-      "label": "docker",
+      "label": "format",
       "type": "shell",
-      "command": "docker build -t gcr.io/attakei-website/media ."
-    },
-    {
-      "label": "reformat",
-      "type": "shell",
-      "command": "poetry run black attakei_media tests"
+      "command": "poetry run black {{ cookiecutter.project_package }} tests"
     }
   ]
 }
