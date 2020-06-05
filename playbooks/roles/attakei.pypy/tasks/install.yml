@@ -1,0 +1,8 @@
+- unarchive:
+  src: "{{ pypy__download_url }}"
+  dest: "{{ pypy_install_location }}"
+  remote_src: yes
+- file:
+  src: "{{ pypy_install_location }}/{{ pypy__filrname }}"
+  dest: "{{ pypy_install_location }}/pypy"
+  state: link
