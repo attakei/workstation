@@ -2,6 +2,10 @@
 - hosts: pc
   vars_files:
     - 'vars/{{ ansible_distribution }}.yml'
+  roles:
+    - role: attakei.pypy
+      tags:
+        - pypy
   tasks:
     - name: Setup golang
       include_tasks: tasks/setup_packages.yml
