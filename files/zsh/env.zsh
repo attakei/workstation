@@ -9,6 +9,7 @@ python_user_bin=`python3 -m site --user-base`/bin
 
 path=(
     $python_user_bin(N-/)
+    $HOME/.local/opt/pypy/bin(N-/)
     $HOME/.local/bin(N-/)
     $HOME/.local/node_modules/.bin(N-/)
     $ANDROID_SDK_ROOT/platform-tools(N-/)

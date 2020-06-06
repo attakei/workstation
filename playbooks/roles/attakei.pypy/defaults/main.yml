@@ -1,0 +1,7 @@
+---
+# defaults file for attakei.pypy
+pypy_download_location: https://bitbucket.org/pypy/pypy/downloads
+pypy_python_version: 3.6
+pypy_version: 7.3.1
+pypy_arch: linux64
+pypy_install_location: "{{ ansible_env.HOME }}/.local/opt"

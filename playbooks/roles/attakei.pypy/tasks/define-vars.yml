@@ -1,0 +1,3 @@
+- set_fact:
+    pypy__filrname: "pypy{{ pypy_python_version }}-v{{ pypy_version }}-{{ pypy_arch}}"
+    pypy__download_url: "{{ pypy_download_location }}/pypy{{ pypy_python_version }}-v{{ pypy_version }}-{{ pypy_arch}}.tar.bz2"

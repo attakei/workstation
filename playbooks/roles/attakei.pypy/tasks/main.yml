@@ -1,0 +1,12 @@
+---
+# tasks file for attakei.pypy
+- name: Check installed
+  stat:
+    path: "{{ pypy_install_location }}/pypy"
+  register: st
+- block:
+    - name: Build variables
+      include_tasks: file=define-vars.yml
+    - name: Run installation
+      include_tasks: file=install.yml
+  when: not st.stat.exists
