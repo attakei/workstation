@@ -1,0 +1,17 @@
+# --------------------------------------
+# Build docker container for VSCode workspaces
+# --------------------------------------
+---
+- hosts: pc
+  vars:
+    image_sources: "{{ lookup('dirglob', ansible_env.HOME + '/ws/files/containers/*') }}"
+  tasks:
+    - name: Build local workspace
+      docker_image:
+        build:
+          path: "{{ item }}"
+        name: "attakei/workspace"
+        tag: "{{ item|basename }}"
+        push: yes
+        source: build
+      with_items: "{{ image_sources }}"
