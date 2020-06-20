@@ -4,14 +4,16 @@
 ---
 - hosts: pc
   vars:
-    image_sources: "{{ lookup('dirglob', ansible_env.HOME + '/ws/files/containers/*') }}"
+    images:
+      - python3
+    image_source_dir: "{{ ansible_env.HOME }}/ws/files/containers"
   tasks:
     - name: Build local workspace
       docker_image:
         build:
-          path: "{{ item }}"
+          path: "{{ image_source_dir }}/{{ item }}"
         name: "attakei/workspace"
         tag: "{{ item|basename }}"
         push: yes
         source: build
-      with_items: "{{ image_sources }}"
+      with_items: "{{ images }}"
