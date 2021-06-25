@@ -8,6 +8,7 @@ license = "Apache-2.0"
 [tool.poetry.dependencies]
 python = "^3.8 | ^3.7"
 docker = "^4.2.1"
+ansible = "^4.1.0"
 
 [tool.poetry.dev-dependencies]
 yamllint = "^1.20.0"
