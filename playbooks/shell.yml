@@ -41,5 +41,9 @@
         # - typescript
       vim_additional_plugins:
         - editorconfig/editorconfig-vim
+        - prabirshrestha/vim-lsp
+        - prabirshrestha/asyncomplete.vim
+        - prabirshrestha/asyncomplete-lsp.vim
+        - mattn/vim-lsp-settings
       tags:
         - vim
