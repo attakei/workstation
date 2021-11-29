@@ -34,16 +34,13 @@
         - whole_word_jumping
     - role: attakei.vim_bootstrap
       vim_command: vim
-      vim_langs:
-        - go
-        - html
-        - python
-        # - typescript
       vim_additional_plugins:
         - editorconfig/editorconfig-vim
+        - prabirshrestha/async.vim
         - prabirshrestha/vim-lsp
         - prabirshrestha/asyncomplete.vim
         - prabirshrestha/asyncomplete-lsp.vim
         - mattn/vim-lsp-settings
+        - zah/nim.vim
       tags:
         - vim
