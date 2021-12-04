@@ -1,6 +1,0 @@
-{
-  "project_name": "python application",
-  "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '-')|trim() }}",
-  "project_package": "{{ cookiecutter.project_slug|replace('-', '_')|trim() }}",
-  "project_description": ""
-}
