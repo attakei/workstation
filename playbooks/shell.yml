@@ -42,5 +42,7 @@
         - prabirshrestha/asyncomplete-lsp.vim
         - mattn/vim-lsp-settings
         - zah/nim.vim
+      vim_extra_config: |
+        :let g:NERDTreeWinSize=30
       tags:
         - vim
