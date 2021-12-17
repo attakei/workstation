@@ -1,5 +1,5 @@
 commands:
-  pip: /usr/bin/pip3
+  pip: '{{ ansible_env.HOME }}/.local/bin/pip'
   zsh: /usr/bin/zsh
 # config_dirs:
 #   hyper: '{{ ansible_env.HOME }}/.config/Hyper'
