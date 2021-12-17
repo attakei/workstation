@@ -1,20 +1,21 @@
 ---
 packages_master:
-  # alacritty
+  # Terminal multiplexer
   - modules:
-      pacman: alacritty
-      homebrew: alacritty
+      pacman: zellij
+  # Source code repository manage
+  - modules:
+      pacman: ghq
   # tig
   - modules:
       pacman: tig
       homebrew: tig
+  - modules:
+      pacman: lazygit
   # NeoVim: As bare Vim (vim is used many plugin as small IDE)
   - modules:
       pacman: neovim
       homebrew: neovim
-  # GitKraken
-  - modules:
-      homebrew_cask: gitkraken
   # Django(for django-admin)
   - modules:
       pip: django
@@ -30,3 +31,6 @@ packages_master:
   # poetry
   - modules:
       pip: poetry
+  # Formatting python sources
+  - modules:
+      pip: black
