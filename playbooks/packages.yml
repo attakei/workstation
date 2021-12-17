@@ -9,7 +9,7 @@
   tasks:
     - name: Install packages by pacman(arch only)
       become: yes
-      pacman:
+      yay:
         name: '{{ item.name }}'
         state: '{{ item.state }}'
       with_items: '{{ packages_master|by_module("pacman") }}'
