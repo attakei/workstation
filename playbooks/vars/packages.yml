@@ -6,6 +6,8 @@ packages_master:
   # Source code repository manage
   - modules:
       pacman: ghq
+  - modules:
+      pacman: github-cli
   # tig
   - modules:
       pacman: tig
