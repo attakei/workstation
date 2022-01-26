@@ -32,17 +32,11 @@
         - vox
         - vox_tabcomplete
         - whole_word_jumping
-    - role: attakei.vim_bootstrap
-      vim_command: vim
-      vim_additional_plugins:
-        - editorconfig/editorconfig-vim
-        - prabirshrestha/async.vim
-        - prabirshrestha/vim-lsp
-        - prabirshrestha/asyncomplete.vim
-        - prabirshrestha/asyncomplete-lsp.vim
-        - mattn/vim-lsp-settings
-        - zah/nim.vim
-      vim_extra_config: |
-        let g:NERDTreeWinSize=30
+  tasks:
+    - name: Sync NeoVim configurations
+      ansible.builtin.file:
+        src: '{{ ansible_env.PWD }}/../files/nvim'
+        dest: '{{ ansible_env.HOME }}/.config/nvim'
+        state: link
       tags:
         - vim
