@@ -6,3 +6,5 @@ end
 
 -- Configure packer with plugins
 require('plugins')
+
+require('completion')
