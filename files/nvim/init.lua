@@ -10,3 +10,14 @@ vim.wo.number = true
 require('plugins')
 
 require('completion')
+
+vim.cmd([[
+function! s:init_fern() abort
+  set nonumber
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup END
+]])
