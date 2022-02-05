@@ -5,4 +5,10 @@ ZINIT_HOME={{ zsh__zinit_home }}
 source "${ZINIT_HOME}/zinit.zsh"
 source "${ZSH_CONFIGS}/plugins.zsh"
 
+# Configure interactive-shell
 source "${ZSH_CONFIGS}/prompt.zsh"
+source "${ZSH_CONFIGS}/keybinds.zsh"
+
+if [ -e "$HOME/.zshrc.local" ] ; then
+    source "$HOME/.zshrc.local"
+fi
