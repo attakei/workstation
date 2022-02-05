@@ -12,5 +12,10 @@ fghq () {
   fi
 }
 
+# Get Apache License text
+apache-license () {
+  curl https://apache.org/licenses/LICENSE-2.0.txt > LICENSE
+}
+
 # NeoVim using poetry virtualenv
 alias nvimp='poetry run nvim'
