@@ -1,3 +1,8 @@
+ZSH_CONFIGS={{ zsh__configs_dir }}
+
 # Set up Zinit
 ZINIT_HOME={{ zsh__zinit_home }}
 source "${ZINIT_HOME}/zinit.zsh"
+source "${ZSH_CONFIGS}/plugins.zsh"
+
+source "${ZSH_CONFIGS}/prompt.zsh"
