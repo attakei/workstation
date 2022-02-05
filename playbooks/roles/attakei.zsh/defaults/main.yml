@@ -1,7 +1,6 @@
 ---
 zsh__as_login_shell: no
-zsh__source_extras_dir: files/zsh
-zsh__source_extras: []
-zsh__use_zplugin: no
-zsh__zplugin_home: '{{ ansible_env.HOME }}/.zplugin'
 zsh__bin_path: /usr/bin/zsh
+zsh__extra_paths: []
+zsh__configs_dir: '{{ ansible_env.HOME }}/.config/zsh'
+zsh__zinit_home: '{{ ansible_env.HOME }}/.local/share/zinit/zinit.git'

@@ -13,3 +13,7 @@
     name: '{{ ansible_env.USER }}'
     shell: '{{ zsh__bin_path }}'
   when: zsh__as_login_shell
+- name: Setup Zinit
+  git:
+    repo: https://github.com/zdharma-continuum/zinit.git
+    dest: '{{ zsh__zinit_home }}'
