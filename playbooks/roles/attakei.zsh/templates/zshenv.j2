@@ -1,0 +1,6 @@
+# Set up global environments
+
+# PATH
+{% if zsh__extra_paths -%}
+[[ -o login ]] && path=({{ zsh__extra_paths|join(' ') }} $path)
+{%- endif %}

@@ -6,6 +6,9 @@
     - role: attakei.zsh
       zsh__bin_path: '{{ commands.zsh }}'
       zsh__as_login_shell: yes
+      zsh__extra_paths:
+        - '$HOME/.local/bin'
+        - '$HOME/.nimble/bin'
       zsh__configs_dir: '{{ ansible_env.PWD }}/../files/zsh'
       tags:
         - zsh
