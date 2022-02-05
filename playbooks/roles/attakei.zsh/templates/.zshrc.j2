@@ -1,16 +1,3 @@
-{%- if zsh__use_zplugin -%}
-
-### Added by Zplugin's installer
-source "{{ zsh__zplugin_home }}/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-### End of Zplugin installer's chunk
-
-{% endif -%}
-
-{%- for src in zsh__source_extras -%}
-    source "{{ (zsh__source_extras_dir + '/' + src)|realpath }}"
-{% endfor %}
-if [ -e ~/.zsh_profile ] ; then
-    source ~/.zsh_profile
-fi
+# Set up Zinit
+ZINIT_HOME={{ zsh__zinit_home }}
+source "${ZINIT_HOME}/zinit.zsh"
