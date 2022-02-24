@@ -1,0 +1,1 @@
+alias sysu='systemctl --user'
