@@ -23,13 +23,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/vim-vsnip'
 
   -- Utility
-  use {
-    'lambdalisue/fern.vim',
-    config = function()
-      vim.api.nvim_command('command! FE :execute \':Fern . -drawer\'')
-      vim.api.nvim_command('command! FernPwd :execute \':Fern . -drawer\'')
-    end
-  }
+  use 'lambdalisue/fern.vim'
   use 'editorconfig/editorconfig-vim'
 
   if packer_bootstrap then

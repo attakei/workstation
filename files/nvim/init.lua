@@ -21,3 +21,5 @@ augroup fern-custom
   autocmd FileType fern call s:init_fern()
 augroup END
 ]])
+
+require('commands')
