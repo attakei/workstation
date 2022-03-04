@@ -1,3 +1,5 @@
 #!/bin/sh
 
-poetry run ansible-playbook -i playbooks/inventory playbooks/packages.yml $@
+playbook=$1
+shift
+poetry run ansible-playbook -i playbooks/inventory playbooks/${playbook}.yml $@
