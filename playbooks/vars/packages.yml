@@ -21,9 +21,10 @@ packages_master:
   # Django(for django-admin)
   - modules:
       pip: django
-  # nvm (Node executable manager)
+  # Node executable manager
   - modules:
-      homebrew: nvm
+      homebrew: volta
+      pacman: volta-bin
   # httpie
   - modules:
       pip: httpie
