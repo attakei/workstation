@@ -22,3 +22,5 @@ packages_master:
   - modules:
       homebrew: volta
       pacman: volta-bin
+  - modules:
+      pacman: python-poetry
