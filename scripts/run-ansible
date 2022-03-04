@@ -1,0 +1,3 @@
+#!/bin/sh
+
+poetry run ansible-playbook -i playbooks/inventory playbooks/packages.yml $@
