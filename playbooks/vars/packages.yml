@@ -18,24 +18,12 @@ packages_master:
   - modules:
       pacman: neovim
       homebrew: neovim
-  # Django(for django-admin)
+  # Node executable manager
   - modules:
-      pip: django
-  # nvm (Node executable manager)
+      homebrew: volta
+      pacman: volta-bin
   - modules:
-      homebrew: nvm
-  # httpie
-  - modules:
-      pip: httpie
-  # cookiecutter
-  - modules:
-      pip: cookiecutter
-  # poetry
-  - modules:
-      pip: poetry
-  # Formatting python sources
-  - modules:
-      pip: black
-  # IaC
+      pacman: python-poetry
+  # For Infrastructure as Code
   - modules:
       pacman: terraform
