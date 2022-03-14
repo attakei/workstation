@@ -36,3 +36,6 @@ packages_master:
   # Formatting python sources
   - modules:
       pip: black
+  # IaC
+  - modules:
+      pacman: terraform
