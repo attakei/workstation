@@ -13,7 +13,13 @@ fghq () {
 }
 
 zellijp () {
-  zellij -s $(basename `pwd`)
+  name=$(basename `pwd`)
+  exists=$(zellij list-sessions|grep $name|wc -l)
+  if [ $exists = "1" ] ; then
+    zellij attach $name
+  else
+    zellij -s $name
+  fi
 }
 
 
