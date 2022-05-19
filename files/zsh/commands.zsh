@@ -29,4 +29,12 @@ apache-license () {
 }
 
 # NeoVim using poetry virtualenv
-alias nvimp='poetry run nvim'
+nvimp () {
+  if [ -e "poetry.lock" ] ; then
+    poetry run nvim $@
+  elif [ -e "Pipfile.lock" ] ; then
+    pipenv run nvim $@
+  else
+    nvim $@
+  fi
+}
