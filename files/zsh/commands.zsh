@@ -13,7 +13,13 @@ fghq () {
 }
 
 zellijp () {
-  zellij -s $(basename `pwd`)
+  name=$(basename `pwd`)
+  exists=$(zellij list-sessions|grep $name|wc -l)
+  if [ $exists = "1" ] ; then
+    zellij attach $name
+  else
+    zellij -s $name
+  fi
 }
 
 
@@ -23,4 +29,12 @@ apache-license () {
 }
 
 # NeoVim using poetry virtualenv
-alias nvimp='poetry run nvim'
+nvimp () {
+  if [ -e "poetry.lock" ] ; then
+    poetry run nvim $@
+  elif [ -e "Pipfile.lock" ] ; then
+    pipenv run nvim $@
+  else
+    nvim $@
+  fi
+}

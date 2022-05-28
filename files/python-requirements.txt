@@ -1,3 +1,5 @@
 httpie
 cookiecutter
 pre-commit
+bump2version
+pipenv
