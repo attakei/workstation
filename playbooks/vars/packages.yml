@@ -27,3 +27,5 @@ packages_master:
   # For Infrastructure as Code
   - modules:
       pacman: terraform
+  - modules:
+      pacman: aws-cli-v2-bin
