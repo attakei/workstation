@@ -26,6 +26,9 @@ return require('packer').startup(function(use)
   use 'lambdalisue/fern.vim'
   use 'editorconfig/editorconfig-vim'
 
+  -- Nim-lang
+  use 'alaviss/nim.nvim'
+
   if packer_bootstrap then
     require('packer').sync()
   end
