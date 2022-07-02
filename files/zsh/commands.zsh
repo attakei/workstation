@@ -38,3 +38,7 @@ nvimp () {
     nvim $@
   fi
 }
+
+copy-editorconfig() {
+  cp $HOME/ws/files/dotfiles/.editorconfig `pwd`
+}
