@@ -12,6 +12,7 @@ fghq () {
   fi
 }
 
+# Handle zellij session
 zellijp () {
   name=$(basename `pwd`)
   exists=$(zellij list-sessions|grep $name|wc -l)
@@ -21,7 +22,6 @@ zellijp () {
     zellij -s $name
   fi
 }
-
 
 # Get Apache License text
 apache-license () {
