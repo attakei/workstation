@@ -28,14 +28,13 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
+  ---- Nim-lang
   use 'alaviss/nim.nvim'
 
   -- Utility
   use 'lambdalisue/fern.vim'
-  use 'editorconfig/editorconfig-vim'
+  use 'gpanders/editorconfig.nvim'
 
-  -- Nim-lang
-  use 'alaviss/nim.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
