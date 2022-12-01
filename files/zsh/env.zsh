@@ -1,5 +1,10 @@
 _os=`uname 2> /dev/null`
 
+# Zsh History
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=1000
+
 # Android Studio (SDK management)
 export ANDROID_SDK_ROOT="$HOME/"`if [ $_os = 'Darwin' ] ; then echo Library/; fi`"Android/sdk"
 export ANDROID_HOME=$ANDROID_SDK_ROOT
