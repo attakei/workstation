@@ -2,7 +2,7 @@
 # Zplugin plugin using
 # --------------------------------------
 # zplugin light "b4b4r07/enhancd"
-zplugin light "zsh-users/zsh-syntax-highlighting"
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 # tab-complettion
 zplugin light "zsh-users/zsh-completions"
@@ -20,3 +20,17 @@ zplugin cdclear -q # <- forget completions provided up to this moment
 
 # virtualenv
 zplugin light "Tarrasch/zsh-autoenv"
+
+# zeno.sh
+zinit ice lucid depth"1" blockf
+zinit light yuki-yano/zeno.zsh
+
+if [[ -n $ZENO_LOADED ]]; then
+  # ここに任意のZLEの記述を行う
+  bindkey ' '  zeno-auto-snippet
+  bindkey '^m' zeno-auto-snippet-and-accept-line
+  bindkey '^i' zeno-completion
+  bindkey '^b' zeno-ghq-cd
+  bindkey '^r' zeno-history-selection
+  bindkey '^x' zeno-insert-snippet
+fi
