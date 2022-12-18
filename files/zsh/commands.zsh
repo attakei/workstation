@@ -42,3 +42,15 @@ nvimp () {
 copy-editorconfig() {
   cp $HOME/ws/files/dotfiles/.editorconfig `pwd`
 }
+
+@venv () {
+  if [ -e "venv/bin/activate" ] ; then
+    source venv/bin/activate
+  elif [ -e ".venv/bin/activate" ] ; then
+    source .venv/bin/activate
+  elif [ -e "env/bin/activate" ] ; then
+    source env/bin/activate
+  else
+    echo "This is not venv workspace." >&2
+  fi
+}
