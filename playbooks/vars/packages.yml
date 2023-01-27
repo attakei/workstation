@@ -29,3 +29,6 @@ packages_master:
       pacman: terraform
   - modules:
       pacman: aws-cli-v2-bin
+  # Next-generation CLI tools
+  - modules:
+      pacman: lsd

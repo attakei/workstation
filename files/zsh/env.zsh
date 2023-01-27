@@ -19,6 +19,7 @@ path=(
     $HOME/.local/node_modules/.bin(N-/)
     $ANDROID_SDK_ROOT/platform-tools(N-/)
     $ANDROID_SDK_ROOT/tools(N-/)
+    $HOME/.local/sbin(N-/)
     /usr/local/sbin(N-/)
     $path
 )
