@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 docker = "==4.*"
-ansible = "==4.*"
+ansible = "==7.*"
 
 [dev-packages]
 
