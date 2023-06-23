@@ -11,12 +11,6 @@ source "${HOME}/ws/files/zsh/zinit-plugins.zsh"
 source "$HOME/ws/files/zsh/commands.zsh"
 @source prompt keybinds
 
-# Custom commands
-path=(
-  "$HOME/.local/bin"
-  $path
-)
-
 # Programming language environments
 path=(
   "$HOME/.rye/shims"
