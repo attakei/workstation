@@ -3,6 +3,7 @@
 # --------------------------------------
 # zplugin light "b4b4r07/enhancd"
 zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
 
 # tab-complettion
 zplugin light "zsh-users/zsh-completions"
@@ -24,6 +25,7 @@ zplugin light "Tarrasch/zsh-autoenv"
 # zeno.sh
 zinit ice lucid depth"1" blockf
 zinit light yuki-yano/zeno.zsh
+
 
 if [[ -n $ZENO_LOADED ]]; then
   # ここに任意のZLEの記述を行う
