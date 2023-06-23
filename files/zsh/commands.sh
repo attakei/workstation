@@ -2,6 +2,10 @@
 # Configure common custom-commands and aliases
 # --------------------------------------
 
+# Aliases
+alias sysu='systemctl --user'
+alias apache-license='curl https://apache.org/licenses/LICENSE-2.0.txt > LICENSE'
+
 # Run fzf from ghq directory
 fghq () {
   local selected
@@ -21,11 +25,6 @@ zellijp () {
   else
     zellij -s $name
   fi
-}
-
-# Get Apache License text
-apache-license () {
-  curl https://apache.org/licenses/LICENSE-2.0.txt > LICENSE
 }
 
 # NeoVim using poetry virtualenv
@@ -54,3 +53,12 @@ copy-editorconfig() {
     echo "This is not venv workspace." >&2
   fi
 }
+
+# Load workstation zsh settings
+@source () {
+  # TODO: Auth find directory
+  for f in $@ ; do
+    source ~/ws/files/zsh/${f}.zsh
+  done
+}
+
