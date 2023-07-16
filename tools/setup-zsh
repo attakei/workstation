@@ -3,5 +3,5 @@
 script_dir="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 ws_home=$(dirname "$script_dir")
 
-ln -sf $ws_home/files/zsh/zshenv.sh $HOME/.zshenv
-ln -sf $ws_home/files/zsh/zshrc.sh $HOME/.zshrc
+ln -sf $ws_home/files/zsh/zshenv.zsh $HOME/.zshenv
+ln -sf $ws_home/files/zsh/zshrc.zsh $HOME/.zshrc
