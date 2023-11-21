@@ -15,6 +15,7 @@ source "$HOME/ws/files/zsh/commands.zsh"
 path=(
   "$HOME/.rye/shims"
   "$HOME/.volta/bin"
+  "$HOME/.cargo/bin"
   $path
 )
 
