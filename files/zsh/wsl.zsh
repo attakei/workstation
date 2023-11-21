@@ -4,5 +4,6 @@ if [ $(cat /proc/$PPID/cmdline|sed -e 's/\x0//g') = '/init' ] ; then
 fi
 
 # X and audio
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0 #GWSL
-export PULSE_SERVER=tcp:$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}') #GWSL
+host_ip=`ip route show | grep -i default | awk '{ print $3}'`
+export DISPLAY=$host_ip:0.0 #GWSL
+export PULSE_SERVER=tcp:$host_ip #GWSL
