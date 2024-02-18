@@ -1,0 +1,6 @@
+#!/bin/sh
+
+script_dir="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+ws_home=$(dirname "$script_dir")
+
+ln -sf $ws_home/files/astronvim-user $HOME/.config/nvim/user
