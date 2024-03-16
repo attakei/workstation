@@ -18,4 +18,4 @@ elif [ `which git` != ""] ; then
   git clone https://github.com/AstroNvim/AstroNvim.git $astro_dir
 fi
 ln -sf $astro_dir $nvim_conf_dir
-ln -sf $ws_home/files/astronvim-user $nvim_conf_dir/user
+ln -sf $ws_home/files/astronvim-user $nvim_conf_dir/lua/user
