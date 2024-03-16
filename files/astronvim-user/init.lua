@@ -1,7 +1,9 @@
 return {
-  colorscheme = "solarized",
   plugins = {
-    "maxmx03/solarized.nvim",
+    {
+      "xiyaowong/transparent.nvim",
+      lazy = false,
+    },
   },
   lsp = {
     servers = {
