@@ -16,6 +16,7 @@ path=(
   "$HOME/.rye/shims"
   "$HOME/.volta/bin"
   "$HOME/.cargo/bin"
+  "$HOME/.nimble/bin"
   $path
 )
 
