@@ -2,7 +2,7 @@
 
 script_dir="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 ws_home=$(dirname "$script_dir")
-astro_dir=$HOME/ghq/github.com/AstroNvim/AstroNvim
+astro_dir=$HOME/ghq/github.com/attakei-lab/astronvim-v4
 nvim_conf_dir=$HOME/.config/nvim
 
 if [ -d "$nvim_conf_dir" ] ; then
@@ -13,9 +13,8 @@ fi
 if [ -d "$astro_dir" ] ; then
   echo "AstroNvim repository is already checkouted."
 elif [ `which ghq` != "" ] ; then
-  ghq get AstroNvim/AstroNvim
+  ghq get attakei-lab/astronvim-v4
 elif [ `which git` != ""] ; then
-  git clone https://github.com/AstroNvim/AstroNvim.git $astro_dir
+  git clone https://github.com/attakei-lab/astronvim-v4.git $astro_dir
 fi
 ln -sf $astro_dir $nvim_conf_dir
-ln -sf $ws_home/files/astronvim-user $nvim_conf_dir/lua/user
