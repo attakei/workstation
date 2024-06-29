@@ -2,6 +2,17 @@
 
 script_dir="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 ws_home=$(dirname "$script_dir")
+repo_name=zdharma-continuum/zinit
+repo_dir=$HOME/ghq/github.com/$repo_name
 
+if [ -d "$repo_dir" ] ; then
+  echo "Zinit repository is already checkouted."
+elif [ `which ghq` != "" ] ; then
+  ghq get $repo_name
+elif [ `which git` != ""] ; then
+  git clone https://github.com/$repo_name.git $repo_dir
+fi
+mkdir $HOME/.local/share/zinit
+ln -sf $repo_dir $HOME/.local/share/zinit/zinit.git
 ln -sf $ws_home/files/zsh/zshenv.zsh $HOME/.zshenv
 ln -sf $ws_home/files/zsh/zshrc.zsh $HOME/.zshrc
