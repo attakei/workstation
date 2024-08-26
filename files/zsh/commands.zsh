@@ -7,13 +7,18 @@ alias sysu='systemctl --user'
 alias apache-license='curl https://apache.org/licenses/LICENSE-2.0.txt > LICENSE'
 
 # Run fzf from ghq directory
-fghq () {
+ghqf () {
   local selected
   selected=$(ghq list | fzf)
 
   if [ "x$selected" != "x" ]; then
     cd $(ghq root)/$selected
   fi
+}
+
+# For compatibility
+fghq () {
+  ghqf
 }
 
 # Handle zellij session
