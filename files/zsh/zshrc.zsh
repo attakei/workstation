@@ -13,7 +13,6 @@ source "$HOME/ws/files/zsh/commands.zsh"
 
 # Programming language environments
 path=(
-  "$HOME/.rye/shims"
   "$HOME/.volta/bin"
   "$HOME/.cargo/bin"
   "$HOME/.nimble/bin"
