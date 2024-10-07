@@ -1,0 +1,12 @@
+#!/bin/sh
+
+script_dir="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+ws_home=$(dirname "$script_dir")
+
+if [ `which mise` != "" ] ; then
+  echo "mise is already installed"
+  exit 2
+fi
+
+curl https://mise.run | sh
+ln -s $ws_home/files/mise $HOME/.config/mise
