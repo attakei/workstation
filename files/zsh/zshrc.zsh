@@ -12,12 +12,9 @@ source "$HOME/ws/files/zsh/commands.zsh"
 @source prompt keybinds
 
 # Programming language environments
-path=(
-  "$HOME/.volta/bin"
-  "$HOME/.cargo/bin"
-  "$HOME/.nimble/bin"
-  $path
-)
+# path=(
+#   $path
+# )
 
 # Load machine-local .zshenv
 if [ -e "$HOME/.zshrc.local" ] ; then
