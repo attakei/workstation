@@ -39,6 +39,8 @@ nvimp () {
     poetry run nvim $@
   elif [ -e "Pipfile.lock" ] ; then
     pipenv run nvim $@
+  elif [ -e "uv.lock" ] ; then
+    uv run nvim $@
   else
     nvim $@
   fi
